@@ -50,6 +50,7 @@ Route::get('/', function () {
     return view('welcome');
     */
     //$post->delete();
-    Post::destroy(5,6,7);
-
+    //Post::destroy(5,6,7);
+    $allPosts = Post::all();
+    dd($allPosts);
 });
