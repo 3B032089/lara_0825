@@ -35,15 +35,21 @@ Route::get('/', function () {
     }
     dd($posts);
     */
-    $post = Post::find(1);
+       //$post = Post::find(1);
     /*
     $post->update([
         'title' => 'update title',
         'content' => 'update content',
     ]);
     */
+
+    /*
     $post->title = 'saved title';
     $post->content = 'saved content';
     $post->save();
     return view('welcome');
+    */
+    //$post->delete();
+    Post::destroy(5,6,7);
+
 });
