@@ -24,7 +24,7 @@ Route::get('/', function () {
    //     'title' => 'created title',
    //     'content' => 'created content',
    // ]);
-    $posts = Post::all();
+    $posts = Post::Where('id', '<', 10)->orderBy('id','DESC')->get();
     foreach($posts as $post){
         echo '編號：'.$post->id.'<br>';
         echo '標題：'.$post->title.'<br>';
