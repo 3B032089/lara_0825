@@ -53,6 +53,7 @@ Route::get('/', function () {
     //Post::destroy(5,6,7);
 
     //$allPosts = Post::all();
-    $featuredPosts = Post::where('is_feature',1)->get();
-    dd($featuredPosts);
+    //$featuredPosts = Post::where('is_feature',1)->get();
+    $fourthPosts = Post::find(4);
+    dd($fourthPosts);
 });
