@@ -24,6 +24,7 @@ Route::get('/', function () {
    //     'title' => 'created title',
    //     'content' => 'created content',
    // ]);
+   /*
     $posts = Post::Where('id', '<', 10)->orderBy('id','DESC')->get();
     foreach($posts as $post){
         echo '編號：'.$post->id.'<br>';
@@ -33,5 +34,11 @@ Route::get('/', function () {
         echo '----------------------------'.'<br>';
     }
     dd($posts);
+    */
+    $post = Post::find(1);
+    $post->update([
+        'title' => 'update title',
+        'content' => 'update content',
+    ]);
     return view('welcome');
 });
