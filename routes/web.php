@@ -54,6 +54,7 @@ Route::get('/', function () {
 
     //$allPosts = Post::all();
     //$featuredPosts = Post::where('is_feature',1)->get();
-    $fourthPosts = Post::find(4);
-    dd($fourthPosts);
+    //$fourthPosts = Post::find(4);
+    $lastPost = Post::orderBY('id','DESC')->first();
+    dd($lastPost);
 });
