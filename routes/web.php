@@ -55,6 +55,17 @@ Route::get('/', function () {
     //$allPosts = Post::all();
     //$featuredPosts = Post::where('is_feature',1)->get();
     //$fourthPosts = Post::find(4);
-    $lastPost = Post::orderBY('id','DESC')->first();
-    dd($lastPost);
+    //$lastPost = Post::orderBY('id','DESC')->first();
+   // dd($lastPost);
+
+
+   $post = Post::find(8);
+   echo '標題：'.$post->title.'<br>';
+   echo '內容：'.$post->content.'<br>';
+   echo '----------------------------'.'<br>';
+   $comments = $post->comments()->get();
+   foreach($comments as $comment){
+    echo '留言'.$comment->content.'<br>';
+    echo '----------------------------'.'<br>';
+   }
 });
